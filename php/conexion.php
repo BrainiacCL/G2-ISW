@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost","root", "","clinicadental.sql");
-if ($mysqli->connect_errno){
-    echo "Fallo al conectar con la BD: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+$conectar = new mysqli("localhost","root", "mysql","clinicadental");
+if ($conectar->connect_errno){
+    echo "Fallo al conectar con la BD: (" . $conectar->connect_errno . ") " . $conectar->connect_error;
 }
