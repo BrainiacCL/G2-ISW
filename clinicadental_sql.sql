@@ -140,6 +140,7 @@ CREATE TABLE `profesional` (
   `especialidad_pro` varchar(20) DEFAULT NULL,
   `correo_pro` varchar(50) DEFAULT NULL,
   `telefono_pro` int(11) DEFAULT NULL,
+  `pass_pro` varchar(200) NOT NULL,
   `cod_usuario` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -171,6 +172,7 @@ CREATE TABLE `secretaria` (
   `apellidos_sec` varchar(30) DEFAULT NULL,
   `correo_sec` varchar(50) DEFAULT NULL,
   `telefono_sec` int(11) DEFAULT NULL,
+  `pass_sec` varchar(200) NOT NULL,
   `cod_usuario` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -182,17 +184,19 @@ CREATE TABLE `secretaria` (
 
 CREATE TABLE `usuario` (
   `cod_usuario` bigint(20) NOT NULL,
-  `pass_usuario` varchar(20) DEFAULT NULL,
-  `tipo_usuario` varchar(20) DEFAULT NULL
+  `tipo_usuario` varchar(20) DEFAULT NULL,
+  `pass_master` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`cod_usuario`, `pass_usuario`, `tipo_usuario`) VALUES
-(839, '1829', 'master'),
-(850, '1829', 'profesional');
+INSERT INTO `usuario` (`cod_usuario`, `tipo_usuario`, `pass_master`) VALUES
+(839,'master', 'admin'),
+(842,'secretaria',''),
+(850,'profesional','');
+
 
 --
 -- Índices para tablas volcadas
