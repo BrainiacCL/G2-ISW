@@ -73,7 +73,7 @@
                       <li><a href="#contacto">Contacto</a></li>
                  
                                    
-                          <li class="bg-transparent hover:bg-blue-500   font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" target="" ><a href="#">Ingresar</a></li>
+                          <li class="bg-transparent hover:bg-blue-500   font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" target="" ><a href="php/login/login.php">Ingresar</a></li>
          
 
                       
