@@ -84,7 +84,6 @@
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="../../iconos-fontawesome/css/all.min.css">
-    
 
 
     <style>
@@ -96,20 +95,23 @@
 
 </head>
 <body>
-    <header class="cabecera">
-        <h1>Ventana de Inicio de Sesión</h1>
-        
-    <p>
-        <a href="../../index.php">Ir a inicio</a>
-    </p>
-    </header>
+    <div class="contenedor-logo">
+        <header class="cabecera">
+    
+        <a href="../../index.php" class="diente-index">
+            <img src="../../images/logo-login.png" alt="" width="150px">
+            <figcaption class="texto-logo"> <b>Volver a Inicio</b></figcaption>
+        </a>
+     
+        </header>
+    </div>
 
     
     
     <div class="box-select">
-        <h2>Usted es:</h2>
+        <h2>Iniciar Sesión</h2>
         <select name="select" id="select" class="select">
-            <option value="" disabled selected>Seleccione</option>
+            <option value="" disabled selected>Seleccione un Rol</option>
             <option value="div1">Administrador</option>
             <option value="div2">Dentista</option>
             <option value="div3">Secretaria</option>
@@ -132,7 +134,7 @@
             <h2>Administrador</h2>
             <form action="" method="post" class="formu-login">
                 
-                <label for="">Codigo de Administrador: </label>
+                <label for="">Código de Administrador: </label>
                 <input type="text" placeholder="Ej: 123456789" name="cod-admi" class="input">
                 
                 <label for="">Contraseña: </label>

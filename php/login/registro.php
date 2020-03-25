@@ -1,6 +1,9 @@
 <?php
     session_start();
-
+    
+    if(!isset($_SESSION['cod-admi'])){
+        header("Location: login.php");
+    }
 
     require '../conexion.php';
 
@@ -103,24 +106,28 @@
     <script src="../../js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
+
+    <div class="contenedor-logo">
+        <header class="cabecera">
     
-    <header class="cabecera">
-        <h1>Ventana de Registro de Usuarios</h1>
+        <a href="../../index.php" class="diente-index">
+            <img src="../../images/logo-login.png" alt="" width="150px">
+            <figcaption class="texto-logo"> <b>Volver a Inicio</b></figcaption>
+        </a>
+
+        <p>
+            <a href="cerrar.php" class="btn-cerrar">Cerrar Sesión</a>
+        </p>
         
-        <p>
-            <a href="../../index.php">Ir al inicio</a>
-        </p>
-        <p>
-            <a href="cerrar.php">Cerrar Sesión</a>
-        </p>
-    </header>
+        </header>
+    </div>
 
     <div class="box-select">
-        <h2>Elija a quien desea registrar:</h2>
+        <h2>¿A Quien Desea Registrar?</h2>
         <select name="select" id="select" class="select">
             <option value="" selected disabled>Seleccione</option>
             <option value="div1">Secretaria</option>
-            <option value="div2">Profesional</option>
+            <option value="div2">Dentista</option>
         </select>
 
         <?php if(!empty($errores)):?>
@@ -146,7 +153,7 @@
                 <input type="text" name="apellido" placeholder="Ej: Perez " class="input-registro">
                     
                 <label for="" class="label">Rut: </label>
-                <input type="text" name="rut" placeholder="Ej: 17423911-2" minlength="9" maxlength="10" class="input-registro">
+                <input type="text" name="rut" placeholder="Ej: 17423911-2" id= minlength="9" maxlength="10" class="input-registro">
 
                 <label for="" class="label">Correo electrónico: </label>
                 <input type="email" name="correo" placeholder="Ej: usuario@correo.com " class="input-registro">
@@ -157,14 +164,14 @@
 
 
                 <label for="" class="label">Contraseña </label>
-                <input type="password" name="contraseña1" placeholder="contraseña: " class="input-registro">
+                <input type="password" name="contraseña1" placeholder="Contraseña: " class="input-registro">
 
 
                 <label for="" class="label">Repetir Contraseña </label>
-                <input type="password" name="contraseña2" placeholder="contraseña: " class="input-registro">
+                <input type="password" name="contraseña2" placeholder="Contraseña: " class="input-registro">
        
 
-                <input type="submit" name="insert-secre" value="Registrar a Secretaria" class="btn-registro">
+                <input type="submit" name="insert-secre" value="Registrar Secretaria" class="btn-registro">
             </form>
 
 
@@ -190,11 +197,11 @@
 
 
                 <label for="" class="label">Contraseña </label>
-                <input type="password" name="contraseña1" placeholder="contraseña: "class="input-registro">
+                <input type="password" name="contraseña1" placeholder="Contraseña: "class="input-registro">
 
 
                 <label for="" class="label">Repetir Contraseña </label>
-                <input type="password" name="contraseña2" placeholder="contraseña: "class="input-registro">
+                <input type="password" name="contraseña2" placeholder="Contraseña: "class="input-registro">
  
 
                 <label for="" class="select-esp">Selecciona una Especialidad: </label>
@@ -208,7 +215,7 @@
                 </select>
 
                       
-                <input type="submit" name="insert-pro" value="Registrar a Profesional" class="btn-registro btn2">
+                <input type="submit" name="insert-pro" value="Registrar Dentista" class="btn-registro btn2">
             </form>
         </div>
 

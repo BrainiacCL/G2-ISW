@@ -19,12 +19,46 @@ body{
 }
 
 /* DISEÑO CABECERA */
+.contenedor-logo{
+    display: block;
+    margin: 1rem;
+}
+
 .cabecera{
     display: flex;
-    justify-content: space-around;
-    margin-top: 2rem;
-
+    justify-content: space-between;
+    margin: 5rem;
 }
+
+figcaption{
+    display:none; 
+    transition: all 2s;
+    margin-left: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+}
+.diente-index:hover figcaption{
+    display:block;
+    transition: all .5s ease-in-out;
+}
+
+
+
+.btn-cerrar{
+    border: 2px solid #2498db;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    margin-top: 10rem;
+    border-radius: 15px;
+    transition: 0.2s;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    
+}
+
 
 /*  Diseño del Select */
 
@@ -53,6 +87,7 @@ body{
 .select{
     font-size: 18px;
 }
+
 .select:hover{
     -webkit-transform:scale(1.1);
     transform:scale(1.1);
@@ -85,7 +120,6 @@ body{
     border-radius: 1rem;
 
 }
-
 .caja-registro{
     position: absolute;
     top: 60%;
@@ -99,6 +133,7 @@ body{
     box-shadow: 0 15px 25px rgba(0,0,0.9);
     border-radius: 1rem;
 }
+
 .caja h2{
     margin: 0;
     padding: 0;
@@ -106,6 +141,9 @@ body{
     margin-bottom: 3rem;
     font-size: 3.5rem;
 }
+
+
+
 
 .formu-login{
     display: flex;
@@ -146,7 +184,7 @@ body{
     border-radius: .6rem;
     font-weight: 400;
     text-decoration: none;
-    color: black;
+    color: white;
     text-transform: uppercase; 
     width: 50%;
     margin: auto;
@@ -158,7 +196,7 @@ body{
     border-radius: .6rem;
     font-weight: 400;
     text-decoration: none;
-    color: black;
+    color: white;
     text-transform: uppercase; 
     width: 100%;
     margin-top: 3rem;
