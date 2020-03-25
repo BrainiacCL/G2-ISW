@@ -82,8 +82,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../../iconos-fontawesome/css/all.min.css">
+    
+
+
     <style>
-        #pai div{
+        #box div{
             display: none;
         }
     </style>
@@ -91,85 +96,87 @@
 
 </head>
 <body>
+    <header class="cabecera">
+        <h1>Ventana de Inicio de Sesión</h1>
+        
+    <p>
+        <a href="../../index.php">Ir a inicio</a>
+    </p>
+    </header>
 
-    <center><h1>Ventana de Inicio de Sesión</h1> </center>
-
-    <h2>Usted es:</h2>
-    <!-- PUEDE SER UN CHECKBOX -->
-    <select name="select" id="select">
-        <option value="" disabled selected>Seleccione</option>
-        <option value="div1">Administrador</option>
-        <option value="div2">Profesional</option>
-        <option value="div3">Secretaria</option>
-    </select>
-    <br><br><br>
-
-    <div id="pai">
-
-        <div id="div1">
-            <h2>Administrador</h2>
-            <form action="" method="post">
-
-                <label for="">Codigo de Administrador</label><br>
-                <input type="text" placeholder="Ej: 123456789" name="cod-admi">
-                <br><br>
-
-                <label for="">Contraseña</label><br>
-                <input type="password" placeholder="" name="clave">
-                <br><br>
-
-                <input type="submit" name="login-administrador" value="Iniciar Sesión">
-
-            </form>
-        </div>
-
-
-        <div id="div2">
-            <h2>Profesional</h2>
-            <form action="" method="post">
-
-                <label for="">Ingrese su Rut</label><br>
-                <input type="text" placeholder="Ej: 17452877-1" name="rut-pro">
-                <br><br>
-
-                <label for="">Ingrese la Contraseña</label><br>
-                <input type="password" placeholder="" name="clave">
-                <br><br>
-
-                <input type="submit" name="login-profesional" value="Iniciar Sesión">
-
-            </form>
-        </div>
-
-        <div id="div3">
-            <h2>Secretaria</h2>
-            <form action="" method="post">
-
-                <label for="">Ingrese su Rut</label><br>
-                <input type="text" placeholder="Ej: 12345678-9" name="rut-secre">
-                <br><br>
-
-                <label for="">Ingrese la Contraseña</label><br>
-                <input type="password" placeholder="" name="clave">
-                <br><br>
-
-                <input type="submit" name="login-secretaria" value="Iniciar Sesión">
-
-            </form>
-        </div>
-
+    
+    
+    <div class="box-select">
+        <h2>Usted es:</h2>
+        <select name="select" id="select" class="select">
+            <option value="" disabled selected>Seleccione</option>
+            <option value="div1">Administrador</option>
+            <option value="div2">Dentista</option>
+            <option value="div3">Secretaria</option>
+        </select>
+        
         <?php if(!empty($errores)):?>
             <ul class="errores">
                 <?php echo $errores; ?>
             </ul>
         <?php endif;?>
-
-
     </div>
 
-    <p>
-        <a href="../../index.php">Ir a inicio</a>
-    </p>
+       
+    
+    
+
+    <div id="box">
+
+        <div id="div1" class="caja">
+            <h2>Administrador</h2>
+            <form action="" method="post" class="formu-login">
+                
+                <label for="">Codigo de Administrador: </label>
+                <input type="text" placeholder="Ej: 123456789" name="cod-admi" class="input">
+                
+                <label for="">Contraseña: </label>
+                <input type="password" placeholder=" Contraseña" name="clave" class="input">
+                
+                <input type="submit" name="login-administrador" value="Iniciar Sesión" class="btn">
+
+
+            </form>
+        </div>
+
+
+        <div id="div2" class="caja">
+            <h2>Dentista</h2>
+            <form action="" method="post" class="formu-login">
+
+                <label for="">Ingrese su Rut</label>
+                <input type="text" placeholder="Ej: 17452877-1" name="rut-pro" class="input">
+
+                <label for="">Ingrese la Contraseña</label>
+                <input type="password" placeholder="" name="clave" class="input">
+
+                <input type="submit" name="login-profesional" value="Iniciar Sesión" class="btn">
+
+            </form>
+
+        </div>
+
+        <div id="div3" class="caja">
+            <h2>Secretaria</h2>
+            <form action="" method="post" class="formu-login">
+
+                <label for="">Ingrese su Rut</label>
+                <input type="text" placeholder="Ej: 12345678-9" name="rut-secre" class="input">
+
+                <label for="">Ingrese la Contraseña</label>
+                <input type="password" placeholder="" name="clave" class="input">
+
+                <input type="submit" name="login-secretaria" value="Iniciar Sesión" class="btn">
+
+            </form>
+        </div>
+
+    </div>
     
 </body>
 </html>
@@ -181,8 +188,8 @@
 
         var selectValor = '#'+$(this).val();
 
-        $('#pai').children('div').hide();
-        $('#pai').children(selectValor).show();
+        $('#box').children('div').hide();
+        $('#box').children(selectValor).show();
     });
 
     });

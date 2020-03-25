@@ -93,8 +93,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesion</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../../iconos-fontawesome/css/all.min.css">
     <style>
-        #pai div{
+        #box div{
             display: none;
         }
     </style>
@@ -102,88 +104,101 @@
 </head>
 <body>
     
-    <center><h1>Ventana de admin</h1> </center>
+    <header class="cabecera">
+        <h1>Ventana de Registro de Usuarios</h1>
+        
+        <p>
+            <a href="../../index.php">Ir a inicio</a>
+        </p>
+        <p>
+            <a href="cerrar.php">Cerrar Sesión</a>
+        </p>
+    </header>
 
-    <h2>Elija a quien desea registrar:</h2>
-    <select name="select" id="select">
-        <option value="" selected disabled>Seleccione</option>
-        <option value="div1">Secretaria</option>
-        <option value="div2">Profesional</option>
-    </select>
-    <br><br><br>
+    <div class="box-select">
+        <h2>Elija a quien desea registrar:</h2>
+        <select name="select" id="select" class="select">
+            <option value="" selected disabled>Seleccione</option>
+            <option value="div1">Secretaria</option>
+            <option value="div2">Profesional</option>
+        </select>
 
-    <div id="pai">
-        <div id="div1">
-            <form action="" method="post">
+        <?php if(!empty($errores)):?>
+            <ul class="errores">
+                <?php echo $errores; ?>
+            </ul>
+        <?php endif;?>
+
+    </div>
+
+
+
+
+
+    <div id="box">
+        <div id="div1" class="caja-registro">
+            <form action="" method="post" class="formu-registro">
+
                 <label for="" class="label">Nombre: </label>
-                <input type="text" name="nombre" placeholder="Ej: Rodrígo">
-                <br>
+                <input type="text" name="nombre" placeholder="Ej: Rodrígo" class="input-registro">
 
                 <label for="" class="label">Apellido: </label>
-                <input type="text" name="apellido" placeholder="Ej: Perez ">
-                <br>
+                <input type="text" name="apellido" placeholder="Ej: Perez " class="input-registro">
                     
                 <label for="" class="label">Rut: </label>
-                <input type="text" name="rut" placeholder="Ej: 17423911-2" minlength="9" maxlength="10">
-                <br>
+                <input type="text" name="rut" placeholder="Ej: 17423911-2" minlength="9" maxlength="10" class="input-registro">
 
                 <label for="" class="label">Correo electrónico: </label>
-                <input type="email" name="correo" placeholder="Ej: usuario@correo.com ">
-                <br>
+                <input type="email" name="correo" placeholder="Ej: usuario@correo.com " class="input-registro">
+
 
                 <label for="" class="label">Número telefónico: </label>
-                <input type="tel" name="telefono" placeholder="Ej: 91111111" minlength="9" maxlength="10">
-                <br>
+                <input type="tel" name="telefono" placeholder="Ej: 91111111" minlength="9" maxlength="10" class="input-registro" >
+
 
                 <label for="" class="label">Contraseña </label>
-                <input type="password" name="contraseña1" placeholder="contraseña: ">
-                <br>
+                <input type="password" name="contraseña1" placeholder="contraseña: " class="input-registro">
+
 
                 <label for="" class="label">Repetir Contraseña </label>
-                <input type="password" name="contraseña2" placeholder="contraseña: ">
-                <br> 
+                <input type="password" name="contraseña2" placeholder="contraseña: " class="input-registro">
+       
 
-                <br><br>       
-                <input type="submit" name="insert-secre" value="Registrar a Secretaria">
-
+                <input type="submit" name="insert-secre" value="Registrar a Secretaria" class="btn-registro">
             </form>
+
 
         </div>
 
-        <div id="div2">
-            <form action="" method="post">
+        <div id="div2" class="caja-registro">
+            <form action="" method="post" class="formu-registro">
+
                 <label for="" class="label">Nombre: </label>
-                <input type="text" name="nombre" placeholder="Ej: Rodrígo ">
-                <br>
+                <input type="text" name="nombre" placeholder="Ej: Rodrígo "class="input-registro">
 
                 <label for="" class="label">Apellido: </label>
-                <input type="text" name="apellido" placeholder="Ej: Perez ">
-                <br>
+                <input type="text" name="apellido" placeholder="Ej: Perez "class="input-registro">
                     
                 <label for="" class="label">Rut: </label>
-                <input type="text" name="rut" placeholder="Ej: 17423911-2 " minlength="9" maxlength="10">
-                <br>
+                <input type="text" name="rut" placeholder="Ej: 17423911-2 " minlength="9" maxlength="10"class="input-registro">
 
                 <label for="" class="label">Correo electrónico: </label>
-                <input type="email" name="correo" placeholder="Ej: usuario@correo.com ">
-                <br>
+                <input type="email" name="correo" placeholder="Ej: usuario@correo.com "class="input-registro">
 
                 <label for="" class="label">Número telefónico: </label>
-                <input type="tel" name="telefono" placeholder="Ej: 91111111 " minlength="9" maxlength="10">
-                <br>
+                <input type="tel" name="telefono" placeholder="Ej: 91111111 " minlength="9" maxlength="10"class="input-registro">
+
 
                 <label for="" class="label">Contraseña </label>
-                <input type="password" name="contraseña1" placeholder="contraseña: ">
-                <br>
+                <input type="password" name="contraseña1" placeholder="contraseña: "class="input-registro">
+
 
                 <label for="" class="label">Repetir Contraseña </label>
-                <input type="password" name="contraseña2" placeholder="contraseña: ">
-                <br> 
+                <input type="password" name="contraseña2" placeholder="contraseña: "class="input-registro">
+ 
 
-                <br><br>
-                <label for="">Selecciona una Especialidad: </label>
-                <br>
-                <select name="especialidad" id="especialidad">
+                <label for="" class="select-esp">Selecciona una Especialidad: </label>
+                <select name="especialidad" id="especialidad" class="select-reg">
                     <option value="Cirujano" selected>Cirujano Dentista</option>
                     <option value="Ortodoncia">Ortodoncista</option>
                     <option value="Exodoncia">Exodoncista</option>
@@ -192,25 +207,12 @@
                     <option value="Periodoncia">Prostodoncista</option>
                 </select>
 
-                <br><br>       
-                <input type="submit" name="insert-pro" value="Registrar a Profesional">
+                      
+                <input type="submit" name="insert-pro" value="Registrar a Profesional" class="btn-registro btn2">
             </form>
         </div>
 
-        <?php if(!empty($errores)):?>
-            <ul class="errores">
-                <?php echo $errores; ?>
-            </ul>
-        <?php endif;?>
-        
-        
-        <p>
 
-            <a href="login.php" class="link">Ir al login</a>
-        </p>
-        <p>
-        <a href="cerrar.php">Cerrar Sesión</a>
-    </p>
         
     </div>
     
@@ -225,8 +227,8 @@
 
         var selectValor = '#'+$(this).val();
 
-        $('#pai').children('div').hide();
-        $('#pai').children(selectValor).show();
+        $('#box').children('div').hide();
+        $('#box').children(selectValor).show();
     });
 
     });

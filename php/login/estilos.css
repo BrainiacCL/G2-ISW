@@ -1,0 +1,175 @@
+*{ /*para reinciar la franja blanca top del header*/
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: none;
+    outline: none;
+    text-decoration: none;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /** 1rem = 10px **/
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    background: url(../../images/fondo-login.jpg);
+    background-size: cover;
+}
+
+/* DISEÑO CABECERA */
+.cabecera{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+
+}
+
+/*  Diseño del Select */
+
+.box-select{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.box-select h2{
+    font-family: Playfair Display;
+    margin-bottom: 1rem;
+    color: white;
+}
+.box-select select{
+    background: #14a2bb7a;
+    color: white;
+    padding: 1rem;
+    width: 25rem;
+    height: 50px;
+    box-shadow: 0 5px 25px rgba(0,0,0,.5);
+    -webkit-appearance: button;
+    outline: none;
+    cursor: pointer;
+}
+.select{
+    font-size: 18px;
+}
+.select:hover{
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    transition: all .5s ease-in-out;
+}
+
+/* ERRORES */
+.errores{
+    margin-top: 2rem;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-style: italic;
+
+}
+
+
+/*  Fin diseño Select */
+
+.caja{ /*del login*/
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 50%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0.9);
+    border-radius: 1rem;
+
+}
+
+.caja-registro{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 60%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0.9);
+    border-radius: 1rem;
+}
+.caja h2{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+}
+
+.formu-login{
+    display: flex;
+    flex-direction: column;
+}
+.formu-registro{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 3rem;
+    
+}
+.formu-login label{
+    width: 60%;
+    margin: auto;
+    padding: .8rem 0;
+}
+.formu-login .input{
+    width: 60%;
+    margin: auto;
+    height: 3rem;
+    margin-bottom: 2rem;
+}
+.formu-registro .input-registro{
+    width: 100%;
+    margin: auto;
+    height: 3rem;
+}
+.formu-registro .label{
+    width: 60%;
+    padding: .8rem 0;
+    margin-bottom: 1rem;  
+}
+
+.btn{
+    margin-top: 3rem;
+    background-color: rgba(16, 130, 196, 0.897);
+    padding: 1rem;
+    border-radius: .6rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase; 
+    width: 50%;
+    margin: auto;
+    cursor: pointer;
+}
+.btn-registro{
+    background-color: rgba(16, 130, 196, 0.897);
+    padding: 1rem;
+    border-radius: .6rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase; 
+    width: 100%;
+    margin-top: 3rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.select-reg{
+    height: 2.5rem;
+}
+
+
+
