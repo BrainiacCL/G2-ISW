@@ -1,7 +1,10 @@
 <?php
-
-$conectar = mysqli_connect("localhost", "root", "", "clinicadental_sql") or die ("Error");
-
-// $conectar = mysqli_connect("localhost","root","mysql","siaprueba") or die ("Error");
-
+	
+	$conectar = new mysqli('localhost', 'root', '', 'clinicadental_sql');
+	
+	if($conectar->connect_error){
+		
+		die('Error en la conexion' . $conectar->connect_error);
+		
+	}
 ?>

@@ -13,8 +13,7 @@ if(isset($_POST['enviar'])){
     $ejecutar = mysqli_query($conectar, $insertar);
 
     if($ejecutar){
-        echo "<script> alert('presupuesto añadido')</script>";
-        echo "<script>window.open('presupuesto.php','_self')</script>";
+        echo "<script> alert('Presupuesto Añadido')</script>";
     }
     else{
         echo "<script> alert('No se pudo añadir el presupuesto, intente llenar todos los espacios.')</script>";
@@ -155,13 +154,15 @@ if(isset($_POST['limpiar'])) {
 					<from action="presupuesto.php" method="post">
 
 					    <button type="submit" name="limpiar">Limpiar</button>
-					
+					       
 					</form>
 
 					<div>
 						<p>El presupuesto total de la consulta es: $<?php echo $fil["Ptotal"] ?></p>
 					</div>
 
+                    <a href="pdf.php">Generar PDF</a>
+                    
             </fieldset>
 
         </form>
