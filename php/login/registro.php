@@ -108,7 +108,7 @@
         <h1>Ventana de Registro de Usuarios</h1>
         
         <p>
-            <a href="../../index.php">Ir a inicio</a>
+            <a href="../../index.php">Ir al inicio</a>
         </p>
         <p>
             <a href="cerrar.php">Cerrar Sesión</a>
