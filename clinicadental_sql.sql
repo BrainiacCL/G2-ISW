@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 25-03-2020 a las 00:43:42
--- Versión del servidor: 5.7.24
--- Versión de PHP: 7.2.14
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 25-03-2020 a las 02:39:34
+-- Versión del servidor: 10.4.11-MariaDB
+-- Versión de PHP: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `clinicadental_sql`
+-- Base de datos: `clinicadental`
 --
 
 -- --------------------------------------------------------
@@ -28,11 +28,9 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `diente`
 --
 
-DROP TABLE IF EXISTS `diente`;
-CREATE TABLE IF NOT EXISTS `diente` (
+CREATE TABLE `diente` (
   `id_diente` bigint(20) NOT NULL,
-  `nombre` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id_diente`)
+  `nombre` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -79,12 +77,10 @@ INSERT INTO `diente` (`id_diente`, `nombre`) VALUES
 -- Estructura de tabla para la tabla `estado_reserva`
 --
 
-DROP TABLE IF EXISTS `estado_reserva`;
-CREATE TABLE IF NOT EXISTS `estado_reserva` (
-  `cod_est` bigint(20) NOT NULL AUTO_INCREMENT,
-  `tipo_est` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`cod_est`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+CREATE TABLE `estado_reserva` (
+  `cod_est` bigint(20) NOT NULL,
+  `tipo_est` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `estado_reserva`
@@ -101,19 +97,14 @@ INSERT INTO `estado_reserva` (`cod_est`, `tipo_est`) VALUES
 -- Estructura de tabla para la tabla `ficha_clinica`
 --
 
-DROP TABLE IF EXISTS `ficha_clinica`;
-CREATE TABLE IF NOT EXISTS `ficha_clinica` (
-  `cod_fic` bigint(20) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `ficha_clinica` (
+  `cod_fic` bigint(20) NOT NULL,
   `fecha_fic` date DEFAULT NULL,
   `observacion_fic` varchar(50) DEFAULT NULL,
   `radiografias_fic` varchar(50) DEFAULT NULL,
   `cod_die` bigint(20) NOT NULL,
   `rut_pro` varchar(12) NOT NULL,
-  `rut_pac` varchar(12) NOT NULL,
-  PRIMARY KEY (`cod_fic`),
-  KEY `cod_die` (`cod_die`),
-  KEY `rut_pro` (`rut_pro`),
-  KEY `rut_pac` (`rut_pac`)
+  `rut_pac` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -122,13 +113,11 @@ CREATE TABLE IF NOT EXISTS `ficha_clinica` (
 -- Estructura de tabla para la tabla `insumo`
 --
 
-DROP TABLE IF EXISTS `insumo`;
-CREATE TABLE IF NOT EXISTS `insumo` (
-  `cod_ins` bigint(20) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `insumo` (
+  `cod_ins` bigint(20) NOT NULL,
   `nombre_ins` varchar(20) DEFAULT NULL,
   `fecha_ingreso_ins` date DEFAULT NULL,
-  `cantidad_ins` int(11) DEFAULT NULL,
-  PRIMARY KEY (`cod_ins`)
+  `cantidad_ins` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -137,14 +126,10 @@ CREATE TABLE IF NOT EXISTS `insumo` (
 -- Estructura de tabla para la tabla `ocupa`
 --
 
-DROP TABLE IF EXISTS `ocupa`;
-CREATE TABLE IF NOT EXISTS `ocupa` (
+CREATE TABLE `ocupa` (
   `cod_pedido` bigint(20) NOT NULL,
   `cod_ins` bigint(20) NOT NULL,
-  `rut_pro` varchar(12) DEFAULT NULL,
-  PRIMARY KEY (`cod_pedido`),
-  KEY `cod_ins` (`cod_ins`),
-  KEY `rut_pro` (`rut_pro`)
+  `rut_pro` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -153,14 +138,12 @@ CREATE TABLE IF NOT EXISTS `ocupa` (
 -- Estructura de tabla para la tabla `paciente`
 --
 
-DROP TABLE IF EXISTS `paciente`;
-CREATE TABLE IF NOT EXISTS `paciente` (
+CREATE TABLE `paciente` (
   `rut_pac` varchar(12) NOT NULL,
   `nombres_pac` varchar(30) DEFAULT NULL,
   `apellidos_pac` varchar(30) DEFAULT NULL,
   `correo_pac` varchar(50) DEFAULT NULL,
-  `telefono_pac` int(11) DEFAULT NULL,
-  PRIMARY KEY (`rut_pac`)
+  `telefono_pac` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -169,11 +152,9 @@ CREATE TABLE IF NOT EXISTS `paciente` (
 -- Estructura de tabla para la tabla `prestaciones`
 --
 
-DROP TABLE IF EXISTS `prestaciones`;
-CREATE TABLE IF NOT EXISTS `prestaciones` (
+CREATE TABLE `prestaciones` (
   `id_prestaciones` int(11) NOT NULL,
-  `nombre` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id_prestaciones`)
+  `nombre` varchar(45) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -196,16 +177,12 @@ INSERT INTO `prestaciones` (`id_prestaciones`, `nombre`) VALUES
 -- Estructura de tabla para la tabla `presupuesto`
 --
 
-DROP TABLE IF EXISTS `presupuesto`;
-CREATE TABLE IF NOT EXISTS `presupuesto` (
-  `id_presupuesto` bigint(20) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `presupuesto` (
+  `id_presupuesto` bigint(20) NOT NULL,
   `descripcion` varchar(45) DEFAULT NULL,
   `precio` int(11) DEFAULT NULL,
   `id_diente` bigint(20) NOT NULL,
-  `id_prestaciones` int(11) NOT NULL,
-  PRIMARY KEY (`id_presupuesto`),
-  KEY `id_diente_idx` (`id_diente`),
-  KEY `id_prestaciones_idx` (`id_prestaciones`)
+  `id_prestaciones` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -214,18 +191,16 @@ CREATE TABLE IF NOT EXISTS `presupuesto` (
 -- Estructura de tabla para la tabla `profesional`
 --
 
-DROP TABLE IF EXISTS `profesional`;
-CREATE TABLE IF NOT EXISTS `profesional` (
+CREATE TABLE `profesional` (
   `rut_pro` varchar(12) NOT NULL,
   `nombres_pro` varchar(30) DEFAULT NULL,
   `apellidos_pro` varchar(30) DEFAULT NULL,
   `especialidad_pro` varchar(20) DEFAULT NULL,
   `correo_pro` varchar(50) DEFAULT NULL,
   `telefono_pro` int(11) DEFAULT NULL,
-  `cod_usuario` bigint(20) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`rut_pro`),
-  KEY `cod_usuario` (`cod_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=851 DEFAULT CHARSET=utf8;
+  `pass_pro` varchar(200) NOT NULL,
+  `cod_usuario` bigint(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -233,19 +208,14 @@ CREATE TABLE IF NOT EXISTS `profesional` (
 -- Estructura de tabla para la tabla `reserva`
 --
 
-DROP TABLE IF EXISTS `reserva`;
-CREATE TABLE IF NOT EXISTS `reserva` (
-  `cod_res` bigint(20) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `reserva` (
+  `cod_res` bigint(20) NOT NULL,
   `fecha_reservada_res` date DEFAULT NULL,
   `fecha_res` date DEFAULT NULL,
   `prestacion_res` varchar(30) DEFAULT NULL,
   `cod_est` bigint(20) NOT NULL,
   `rut_pro` varchar(12) NOT NULL,
-  `rut_pac` varchar(12) NOT NULL,
-  PRIMARY KEY (`cod_res`),
-  KEY `cod_est` (`cod_est`),
-  KEY `rut_pro` (`rut_pro`),
-  KEY `rut_pac` (`rut_pac`)
+  `rut_pac` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -254,16 +224,14 @@ CREATE TABLE IF NOT EXISTS `reserva` (
 -- Estructura de tabla para la tabla `secretaria`
 --
 
-DROP TABLE IF EXISTS `secretaria`;
-CREATE TABLE IF NOT EXISTS `secretaria` (
+CREATE TABLE `secretaria` (
   `rut_sec` varchar(12) NOT NULL,
-  `nombres_sec` varchar(30) DEFAULT NULL,
-  `apellidos_sec` varchar(30) DEFAULT NULL,
-  `correo_sec` varchar(50) DEFAULT NULL,
-  `telefono_sec` int(11) DEFAULT NULL,
-  `cod_usuario` bigint(20) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`rut_sec`),
-  KEY `cod_usuario` (`cod_usuario`)
+  `nombres_sec` varchar(30) NOT NULL,
+  `apellidos_sec` varchar(30) NOT NULL,
+  `correo_sec` varchar(50) NOT NULL,
+  `telefono_sec` int(11) NOT NULL,
+  `pass_sec` varchar(200) NOT NULL,
+  `cod_usuario` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -272,21 +240,160 @@ CREATE TABLE IF NOT EXISTS `secretaria` (
 -- Estructura de tabla para la tabla `usuario`
 --
 
-DROP TABLE IF EXISTS `usuario`;
-CREATE TABLE IF NOT EXISTS `usuario` (
-  `cod_usuario` bigint(20) NOT NULL AUTO_INCREMENT,
-  `pass_usuario` varchar(20) DEFAULT NULL,
+CREATE TABLE `usuario` (
+  `cod_usuario` bigint(20) NOT NULL,
   `tipo_usuario` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`cod_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=182908510 DEFAULT CHARSET=utf8;
+  `pass_usuario` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`cod_usuario`, `pass_usuario`, `tipo_usuario`) VALUES
-(839, '1829', 'master'),
-(850, '1829', 'profesional');
+INSERT INTO `usuario` (`cod_usuario`, `tipo_usuario`, `pass_usuario`) VALUES
+(839, 'master', 'admin'),
+(842, 'secretaria', ''),
+(850, 'profesional', '');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `diente`
+--
+ALTER TABLE `diente`
+  ADD PRIMARY KEY (`id_diente`);
+
+--
+-- Indices de la tabla `estado_reserva`
+--
+ALTER TABLE `estado_reserva`
+  ADD PRIMARY KEY (`cod_est`);
+
+--
+-- Indices de la tabla `ficha_clinica`
+--
+ALTER TABLE `ficha_clinica`
+  ADD PRIMARY KEY (`cod_fic`),
+  ADD KEY `cod_die` (`cod_die`),
+  ADD KEY `rut_pro` (`rut_pro`),
+  ADD KEY `rut_pac` (`rut_pac`);
+
+--
+-- Indices de la tabla `insumo`
+--
+ALTER TABLE `insumo`
+  ADD PRIMARY KEY (`cod_ins`);
+
+--
+-- Indices de la tabla `ocupa`
+--
+ALTER TABLE `ocupa`
+  ADD PRIMARY KEY (`cod_pedido`),
+  ADD KEY `cod_ins` (`cod_ins`),
+  ADD KEY `rut_pro` (`rut_pro`);
+
+--
+-- Indices de la tabla `paciente`
+--
+ALTER TABLE `paciente`
+  ADD PRIMARY KEY (`rut_pac`);
+
+--
+-- Indices de la tabla `prestaciones`
+--
+ALTER TABLE `prestaciones`
+  ADD PRIMARY KEY (`id_prestaciones`);
+
+--
+-- Indices de la tabla `presupuesto`
+--
+ALTER TABLE `presupuesto`
+  ADD PRIMARY KEY (`id_presupuesto`),
+  ADD KEY `id_diente_idx` (`id_diente`),
+  ADD KEY `id_prestaciones_idx` (`id_prestaciones`);
+
+--
+-- Indices de la tabla `profesional`
+--
+ALTER TABLE `profesional`
+  ADD PRIMARY KEY (`rut_pro`),
+  ADD KEY `cod_usuario` (`cod_usuario`);
+
+--
+-- Indices de la tabla `reserva`
+--
+ALTER TABLE `reserva`
+  ADD PRIMARY KEY (`cod_res`),
+  ADD KEY `cod_est` (`cod_est`),
+  ADD KEY `rut_pro` (`rut_pro`),
+  ADD KEY `rut_pac` (`rut_pac`);
+
+--
+-- Indices de la tabla `secretaria`
+--
+ALTER TABLE `secretaria`
+  ADD PRIMARY KEY (`rut_sec`),
+  ADD KEY `cod_usuario` (`cod_usuario`);
+
+--
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`cod_usuario`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `estado_reserva`
+--
+ALTER TABLE `estado_reserva`
+  MODIFY `cod_est` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `ficha_clinica`
+--
+ALTER TABLE `ficha_clinica`
+  MODIFY `cod_fic` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `insumo`
+--
+ALTER TABLE `insumo`
+  MODIFY `cod_ins` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `presupuesto`
+--
+ALTER TABLE `presupuesto`
+  MODIFY `id_presupuesto` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `profesional`
+--
+ALTER TABLE `profesional`
+  MODIFY `cod_usuario` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=851;
+
+--
+-- AUTO_INCREMENT de la tabla `reserva`
+--
+ALTER TABLE `reserva`
+  MODIFY `cod_res` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `secretaria`
+--
+ALTER TABLE `secretaria`
+  MODIFY `cod_usuario` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=843;
+
+--
+-- AUTO_INCREMENT de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `cod_usuario` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=182908510;
 
 --
 -- Restricciones para tablas volcadas
