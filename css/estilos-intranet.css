@@ -30,7 +30,7 @@ body {
 
 .contenedor {
     width: 95%;
-    max-width: 120rem;
+    max-width: 180rem;
     margin: 0 auto;
 }
 
@@ -202,3 +202,33 @@ a .activado {
     text-align: center;
 }
 
+.contenido-principal .profesionales{
+    display: flex;
+    justify-content: space-between;
+}
+
+.izquierda{
+    width: 70%;
+    height: 500px;
+    float: left;
+    padding: 20px;
+ }
+
+ .derecha{
+    width: 30%;
+    flex-flow: row;
+    padding: 30px;
+    border: 1px solid black;
+    background-color: white;
+    box-shadow: 1px 1px 20px black;
+
+ }
+
+ .formulario{
+    width: 60%;
+    flex-flow: row;
+    padding: 30px;
+    border: 1px solid black;
+    background-color: white;
+    box-shadow: 1px 1px 20px black;
+ }

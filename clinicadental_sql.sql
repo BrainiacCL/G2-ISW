@@ -212,7 +212,8 @@ CREATE TABLE `reserva` (
   `cod_res` bigint(20) NOT NULL,
   `fecha_reservada_res` date DEFAULT NULL,
   `fecha_res` date DEFAULT NULL,
-  `prestacion_res` varchar(30) DEFAULT NULL,
+  `hora` varchar(10) NOT NULL,
+  `id_prestaciones` bigint(20) NOT NULL,
   `cod_est` bigint(20) NOT NULL,
   `rut_pro` varchar(12) NOT NULL,
   `rut_pac` varchar(12) NOT NULL
@@ -328,7 +329,8 @@ ALTER TABLE `reserva`
   ADD PRIMARY KEY (`cod_res`),
   ADD KEY `cod_est` (`cod_est`),
   ADD KEY `rut_pro` (`rut_pro`),
-  ADD KEY `rut_pac` (`rut_pac`);
+  ADD KEY `rut_pac` (`rut_pac`),
+  ADD KEY `id_prestaciones` (`id_prestaciones`);
 
 --
 -- Indices de la tabla `secretaria`
