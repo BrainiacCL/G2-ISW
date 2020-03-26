@@ -58,7 +58,11 @@
     <link rel="stylesheet" href="../../css/all.min.css">
     
 
+<<<<<<< HEAD
     <title>Editar Insumo</title>
+=======
+    <title class="centrar-texto">Editar Insumo</title>
+>>>>>>> 1d363e3dcccb25a6e63d7612534f42c8e374b0b0
 
 </head>
 
@@ -73,10 +77,17 @@
         <a href="#"><img src="../../images/logo-intranet.png" alt="Logo intranet"></a>
         <ul class="barra">
             
+<<<<<<< HEAD
             <li><a href="#Perfil">Perfil</a></li>
             <li><a href="vistaInsumos.php">Insumos</a></li>
             <li><a href="#">Profesionales</a></li>
             <li><a href="#">Prestaciones</a></li>
+=======
+            <li><a href="../perfiles/perfilAdmin">Perfil</a></li>
+            <li><a href="vistaInsumos.php">Insumos</a></li>
+            <li><a href="">Profesionales</a></li>
+            <li><a href="../presupuesto/presupuesto.php">Presupuesto</a></li>
+>>>>>>> 1d363e3dcccb25a6e63d7612534f42c8e374b0b0
             <li><a href="#">Reservas</a></li>
             <li><a href="#">Usuarios</a></li>
         
@@ -86,6 +97,7 @@
    
         <div class="col-10 p-0">
             <div class="header">
+<<<<<<< HEAD
                 <img src="../../images/foto-perfil.png" alt="foto Perfil">
                 <p>Nombre Usuario</p>
             </div>
@@ -93,6 +105,17 @@
                 <center><h1>Editar insumo</h1></center>
             </div>
             <div class="container contenido-principal">
+=======
+             <a href="../perfiles/perfilAdmin"> <img src="../../images/foto-perfil.png" alt="foto Perfil"> </a>
+                <p>Nombre Usuario</p>
+            </div>
+            
+            <div class="contenedor contenido-principal ">
+
+                <div class="titulo">
+                <h1 class="centrar-texto">Editar insumo</h1>
+            </div>
+>>>>>>> 1d363e3dcccb25a6e63d7612534f42c8e374b0b0
 <div id="formulario">
    <br><form action="" method="POST">
                  <center><b><font hidden>Código:</font></b>

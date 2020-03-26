@@ -36,7 +36,15 @@
     <link rel="stylesheet" href="../../css/estilos-intranet.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="../../js/intranet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <title>Insumos</title>
 
@@ -53,10 +61,10 @@
         <a href="#"><img src="../../images/logo-intranet.png" alt="Logo intranet"></a>
         <ul class="barra">
             
-            <li><a href="#Perfil">Perfil</a></li>
+            <li><a href="../perfiles/perfilAdmin">Perfil</a></li>
             <li><a href="vistaInsumos.php">Insumos</a></li>
-            <li><a href="#">Profesionales</a></li>
-            <li><a href="#">Prestaciones</a></li>
+            <li><a href="../perfiles/vistaProfesionales.php">Profesionales</a></li>
+            <li><a href="../presupuesto/presupuesto.php">Presupuesto</a></li>
             <li><a href="#">Reservas</a></li>
             <li><a href="#">Usuarios</a></li>
         
@@ -66,13 +74,13 @@
    
         <div class="col-10 p-0">
             <div class="header">
-                <img src="../../images/foto-perfil.png" alt="foto Perfil">
+             <a href="../perfiles/perfilAdmin">    <img src="../../images/foto-perfil.png" alt="foto Perfil"> </a>
                 <p>Nombre Usuario</p>
             </div>
             <div class="titulo">
                 <h1>Insumos</h1>
             </div>
-            <div class="container contenido-principal">
+            <div class="contenedor contenido-principal">
 
         <div id="principal">
 
@@ -112,9 +120,9 @@
     			<td style="width: 100px;"><?php echo $fila[1] ?></td>
     			<td style="width: 100px;"><?php echo $nueva_fecha_inicio ?></td>
     			<td style="width: 100px;"><?php echo $fila[3] ?></td>
-    			<td style="width: 100px;"><a href="vistaPedido.php?editar=<?php echo $cod_ins ?>" class="btn btn-primary" title="Pedir insumo"><i class="fas fa-plus-square"></i></a>
-            <a href="editarInsumos.php?editar=<?php echo $cod_ins?>" class="btn btn-warning" title="Editar"><i style="color: white;" class="fas fa-edit"></i></a>
-    			<a href="vistaInsumos.php?eliminar=<?php echo $cod_ins?>" class="btn btn-danger" title="Eliminar"><i class="fas fa-trash"></i></a></td>
+    			<td style="width: 200px;"><a href="vistaPedido.php?editar=<?php echo $cod_ins ?>" class="btn btn-primary" title="Pedir insumo">Pedir</a>
+            <a href="editarInsumos.php?editar=<?php echo $cod_ins?>" class="btn btn-warning" title="Editar">Editar</a>
+    			<a href="vistaInsumos.php?eliminar=<?php echo $cod_ins?>" class="btn btn-danger" title="Eliminar">Eliminar</a></td>
             </tr>
             <?php
         }
@@ -152,15 +160,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
    
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="../../js/intranet.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 
 <style>
@@ -180,7 +180,7 @@
 
   #derecha{
   	width: 380px;
-     height: 270px;
+     height: 370px;
      float: left;
      padding: 30px;;
      border: 3px solid black;

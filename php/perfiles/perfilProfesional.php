@@ -22,21 +22,21 @@
     
 
     <div class="row">
-    <div class="barra-lateral col-2 p-0">
+   	 <div class="barra-lateral col-2 p-0">
 
         <a href="#"><img src="../../images/logo-intranet.png" alt="Logo intranet"></a>
         <ul class="barra">
             
-            <li><a href="#Perfil">Perfil</a></li>
-            <li><a href="#">Insumos</a></li>
+            <li><a href="../perfiles/perfilAdmin.php">Perfil</a></li>
+            <li><a href="../insumos/vistaInsumos">Insumos</a></li>
             <li><a href="#">Profesionales</a></li>
-            <li><a href="#">Prestaciones</a></li>
+            <li><a href="../presupuesto/presupuesto.php">Presupuesto</a></li>
             <li><a href="#">Reservas</a></li>
             <li><a href="#">Usuarios</a></li>
         
 
         </ul>
-    </div>
+    	</div>
    
         <div class="col-10 p-0">
             <div class="header">
@@ -58,11 +58,11 @@
                 ?>
             </div>
             <div class="titulo">
-                <h1>Bienvenido</h1>
+                <h1>Perfil Usuario</h1>
             </div>
+
             <div class="container contenido-principal row">
 
-                
                 <div class="contenido col-4">
                     <img src="../../images/dentista1.jpg" alt="foto perfil dentista">
                     <?php
@@ -77,45 +77,41 @@
                     </div>
                     
                 </div>
-                <div class=" contenido horario col-6">
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                            <th scope="col">Handle</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                <div class=" contenido horario col-7 m-0">
+                <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Rut</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Dia</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
                 </div>
+                
             </div>
         </div>
     </div>

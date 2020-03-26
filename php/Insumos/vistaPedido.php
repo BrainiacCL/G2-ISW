@@ -82,6 +82,7 @@
     <div class="row">
     <div class="barra-lateral col-2 p-0">
 
+<<<<<<< HEAD
         <a href="#"><img src="../../images/logo-intranet.png" alt="Logo intranet"></a>
         <ul class="barra">
             
@@ -89,6 +90,15 @@
             <li><a href="vistaInsumos.php">Insumos</a></li>
             <li><a href="#">Profesionales</a></li>
             <li><a href="#">Prestaciones</a></li>
+=======
+        <a href=""><img src="../../images/logo-intranet.png" alt="Logo intranet" ></a>
+        <ul class="barra">
+            
+            <li><a href="../perfiles/PerfilAdmin.php">Perfil</a></li>
+            <li><a href="vistaInsumos.php">Insumos</a></li>
+            <li><a href="#">Profesionales</a></li>
+            <li><a href="../presupuesto/presupuesto.php">Presupuesto</a></li>
+>>>>>>> 1d363e3dcccb25a6e63d7612534f42c8e374b0b0
             <li><a href="#">Reservas</a></li>
             <li><a href="#">Usuarios</a></li>
         
@@ -98,7 +108,11 @@
    
         <div class="col-10 p-0">
             <div class="header">
+<<<<<<< HEAD
                 <img src="../../images/foto-perfil.png" alt="foto Perfil">
+=======
+               <a href="../perfiles/perfilAdmin">  <img src="../../images/foto-perfil.png" alt="foto Perfil"> </a>
+>>>>>>> 1d363e3dcccb25a6e63d7612534f42c8e374b0b0
                 <p>Nombre Usuario</p>
             </div>
             <div class="titulo">
