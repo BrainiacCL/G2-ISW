@@ -8,8 +8,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../css/normalize.css">
-    <link rel="stylesheet" href="../../css/estilos-intranet.css">
+    <link rel="stylesheet" href="../../../css/normalize.css">
+    <link rel="stylesheet" href="../../../css/estilos-intranet.css">
     
 
     <title>Intranet</title>
@@ -24,14 +24,14 @@
     <div class="row">
    	 <div class="barra-lateral col-2 p-0">
 
-        <a href="#"><img src="../../images/logo-intranet.png" alt="Logo intranet"></a>
+        <a href="#"><img src="../../../images/logo-intranet.png" alt="Logo intranet"></a>
         <ul class="barra">
             
-            <li><a href="../perfiles/perfilProfesional.php">Perfil</a></li>
+            <li><a href="../perfilProfesional.php">Perfil</a></li>
             <li><a href="../insumos/vistaInsumos">Insumos</a></li>
             <li><a href="#">Profesionales</a></li>
             <li><a href="../presupuesto/presupuesto.php">Presupuesto</a></li>
-            <li><a href="./vistaintranet/reserva.php">Reservas</a></li>
+            <li><a href="reserva.php">Reservas</a></li>
             <li><a href="#">Usuarios</a></li>
         
 
@@ -40,7 +40,7 @@
    
         <div class="col-10 p-0">
             <div class="header">
-                <img src="../../images/foto-perfil.png" alt="foto Perfil">
+                <img src="../../../images/foto-perfil.png" alt="foto Perfil">
                 <?php
                 session_start();
                 function console_log($output, $with_script_tags = true) {
@@ -63,19 +63,7 @@
 
             <div class="container contenido-principal row">
 
-                <div class="contenido col-4">
-                    <img src="../../images/dentista1.jpg" alt="foto perfil dentista">
-                    <?php
-                      echo "<h3>".$_SESSION['rut-pro'][1]." ".$_SESSION['rut-pro'][2]."</h3>";
-                    ?>
-                    <hr>
-                    <div class="descripcion">
-                        <?php
-                             echo "<p>Destacado dentista especializado en el area de ".$_SESSION['rut-pro'][3]."</p>";
-                        ?>
-                    </div>
-                    
-                </div>
+                
                 <div class=" contenido horario col-7 m-0">
                 <table class="table">
                     <thead class="thead-dark">
