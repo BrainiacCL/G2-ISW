@@ -22,37 +22,60 @@
     
 
     <div class="row">
-    <div class="barra-lateral col-2 p-0">
+   	 <div class="barra-lateral col-2 p-0">
 
         <a href="#"><img src="../../images/logo-intranet.png" alt="Logo intranet"></a>
         <ul class="barra">
             
+<<<<<<< HEAD:php/perfiles/perfilAdmin.php
             <li><a href="#Perfil">Perfil</a></li>
             <li><a href="#">Insumos</a></li>
             <li><a href="../presupuesto/presupuesto.php">Presupuesto</a></li>
             <li><a href="../profesionales/vistaProfesionales.php">Profesionales</a></li>
             <li><a href="#">Prestaciones</a></li>
+=======
+            <li><a href="../perfiles/perfilAdmin.php">Perfil</a></li>
+            <li><a href="../insumos/vistaInsumos">Insumos</a></li>
+            <li><a href="#">Profesionales</a></li>
+            <li><a href="../presupuesto/presupuesto.php">Presupuesto</a></li>
+>>>>>>> c510d8b54fc0332dc3e2689599f6e19c637dc813:php/perfiles/perfilProfesional.php
             <li><a href="#">Reservas</a></li>
             <li><a href="#">Usuarios</a></li>
         
 
         </ul>
-    </div>
+    	</div>
    
         <div class="col-10 p-0">
             <div class="header">
                 <img src="../../images/foto-perfil.png" alt="foto Perfil">
-                <p>Nombre Usuario</p>
+                <?php
+                session_start();
+                function console_log($output, $with_script_tags = true) {
+                  $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . 
+                   ' );';
+                  if ($with_script_tags) {
+                      $js_code = '<script>' . $js_code . '</script>';
+                  }
+                  echo $js_code;
+                 }
+
+                console_log($_SESSION['rut-pro']);
+               
+                echo "<p>".$_SESSION['rut-pro'][1]." ".$_SESSION['rut-pro'][2]."</p>"
+                ?>
             </div>
             <div class="titulo">
-                <h1>Bienvenido</h1>
+                <h1>Perfil Usuario</h1>
             </div>
+
             <div class="container contenido-principal row">
 
-                
                 <div class="contenido col-4">
                     <img src="../../images/dentista1.jpg" alt="foto perfil dentista">
-                    <h3>Nombre Dentista</h3>
+                    <?php
+                      echo "<h3>".$_SESSION['rut-pro'][1]." ".$_SESSION['rut-pro'][2]."</h3>";
+                    ?>
                     <hr>
                     <div class="descripcion">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
@@ -96,6 +119,7 @@
 
 
                 </div>
+                
             </div>
         </div>
     </div>
@@ -106,7 +130,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="../../js/intranet.js"></script>
+    
 </body>
 
 </html>
