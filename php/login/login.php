@@ -40,8 +40,9 @@
 
             if($result > 0){
                 session_start();
-                $_SESSION['rut-pro'] = "Dentista" ;
-                header('Location: profesional.php');
+               $query= mysqli_fetch_array($query);
+                $_SESSION['rut-pro'] =  $query ;
+                header('Location: ../perfiles/perfilProfesional.php');
             }
             else{
                 $errores .= "<li>Rut y/o Contraseña incorrectos.</li>";
