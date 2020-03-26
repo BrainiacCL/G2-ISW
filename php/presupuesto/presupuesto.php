@@ -70,7 +70,7 @@ if(isset($_POST['limpiar'])) {
    
         <div class="col-10 p-0">
             <div class="header">
-                <img src="../../images/foto-perfil.png" alt="foto Perfil">
+               <a href="../perfiles/perfilAdmin">  <img src="../../images/foto-perfil.png" alt="foto Perfil"> </a>
                 <p>Nombre Usuario</p>
             </div>
             <div class="titulo">

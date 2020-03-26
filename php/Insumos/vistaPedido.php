@@ -82,13 +82,13 @@
     <div class="row">
     <div class="barra-lateral col-2 p-0">
 
-        <a href="#"><img src="../../images/logo-intranet.png" alt="Logo intranet"></a>
+        <a href=""><img src="../../images/logo-intranet.png" alt="Logo intranet" ></a>
         <ul class="barra">
             
-            <li><a href="#Perfil">Perfil</a></li>
+            <li><a href="../perfiles/PerfilAdmin.php">Perfil</a></li>
             <li><a href="vistaInsumos.php">Insumos</a></li>
             <li><a href="#">Profesionales</a></li>
-            <li><a href="#">Prestaciones</a></li>
+            <li><a href="../presupuesto/presupuesto.php">Presupuesto</a></li>
             <li><a href="#">Reservas</a></li>
             <li><a href="#">Usuarios</a></li>
         
@@ -98,7 +98,7 @@
    
         <div class="col-10 p-0">
             <div class="header">
-                <img src="../../images/foto-perfil.png" alt="foto Perfil">
+               <a href="../perfiles/perfilAdmin">  <img src="../../images/foto-perfil.png" alt="foto Perfil"> </a>
                 <p>Nombre Usuario</p>
             </div>
             <div class="titulo">
