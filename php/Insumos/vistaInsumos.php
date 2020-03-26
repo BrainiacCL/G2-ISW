@@ -63,7 +63,7 @@
             
             <li><a href="#Perfil">Perfil</a></li>
             <li><a href="vistaInsumos.php">Insumos</a></li>
-            <li><a href="#">Profesionales</a></li>
+            <li><a href="../perfiles/vistaProfesionales.php">Profesionales</a></li>
             <li><a href="#">Prestaciones</a></li>
             <li><a href="#">Reservas</a></li>
             <li><a href="#">Usuarios</a></li>
@@ -80,7 +80,7 @@
             <div class="titulo">
                 <h1>Insumos</h1>
             </div>
-            <div class="container contenido-principal">
+            <div class="contenedor contenido-principal">
 
         <div id="principal">
 
@@ -180,7 +180,7 @@
 
   #derecha{
   	width: 380px;
-     height: 270px;
+     height: 370px;
      float: left;
      padding: 30px;;
      border: 3px solid black;

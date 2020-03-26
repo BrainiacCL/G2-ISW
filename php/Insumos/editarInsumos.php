@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="../../css/all.min.css">
     
 
-    <title>Editar Insumo</title>
+    <title class="centrar-texto">Editar Insumo</title>
 
 </head>
 
@@ -89,10 +89,12 @@
                 <img src="../../images/foto-perfil.png" alt="foto Perfil">
                 <p>Nombre Usuario</p>
             </div>
-            <div class="titulo">
-                <center><h1>Editar insumo</h1></center>
+            
+            <div class="contenedor contenido-principal ">
+
+                <div class="titulo">
+                <h1 class="centrar-texto">Editar insumo</h1>
             </div>
-            <div class="container contenido-principal">
 <div id="formulario">
    <br><form action="" method="POST">
                  <center><b><font hidden>Código:</font></b>

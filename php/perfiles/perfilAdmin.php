@@ -22,12 +22,12 @@
     
 
     <div class="row">
-    <div class="barra-lateral col-2 p-0">
+   	 <div class="barra-lateral col-2 p-0">
 
         <a href="#"><img src="../../images/logo-intranet.png" alt="Logo intranet"></a>
         <ul class="barra">
             
-            <li><a href="#Perfil">Perfil</a></li>
+            <li><a href="../perfiles/perfilAdmin.php">Perfil</a></li>
             <li><a href="#">Insumos</a></li>
             <li><a href="#">Profesionales</a></li>
             <li><a href="#">Prestaciones</a></li>
@@ -36,7 +36,7 @@
         
 
         </ul>
-    </div>
+    	</div>
    
         <div class="col-10 p-0">
             <div class="header">
@@ -44,62 +44,12 @@
                 <p>Nombre Usuario</p>
             </div>
             <div class="titulo">
-                <h1>Bienvenido</h1>
+                <h1>Presupuesto</h1>
             </div>
             <div class="container contenido-principal row">
 
                 
-                <div class="contenido col-4">
-                    <img src="../../images/dentista1.jpg" alt="foto perfil dentista">
-                    <h3>Nombre Dentista</h3>
-                    <hr>
-                    <div class="descripcion">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                            Saepe optio quisquam maiores rem inventore sit! 
-                               
-                        </p> 
-                    </div>
-                    
-                </div>
-                <div class=" contenido horario col-6">
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                            <th scope="col">Handle</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                </div>
+                
             </div>
         </div>
     </div>
