@@ -9,6 +9,7 @@ if(isset($_POST['enviar'])){
     $correo = $_POST['correo_pro'];
     $telefono = $_POST['telefono'];
     $pass = $_POST['pass'];
+    $pass = hash('sha3-512', $pass);
     $tipousuario = 850;
     
 

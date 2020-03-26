@@ -61,7 +61,7 @@
         <a href="#"><img src="../../images/logo-intranet.png" alt="Logo intranet"></a>
         <ul class="barra">
             
-            <li><a href="../perfiles/perfilAdmin">Perfil</a></li>
+            <li><a href="../perfiles/perfilAdmin.php">Perfil</a></li>
             <li><a href="vistaInsumos.php">Insumos</a></li>
             <li><a href="../perfiles/vistaProfesionales.php">Profesionales</a></li>
             <li><a href="../presupuesto/presupuesto.php">Presupuesto</a></li>

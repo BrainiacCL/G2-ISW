@@ -1,10 +1,5 @@
 <?php include('../conexion.php');
     session_start();
-
-    if(!isset($_SESSION['rut-pro'])){
-        header("Location: login.php");
-    }
-
 ?>
 
 <!doctype html>
@@ -36,13 +31,11 @@
             <a href="#"><img src="../../images/logo-intranet.png" alt="Logo intranet"></a>
             <ul class="barra">
                 
-                <li><a href="#Perfil">Perfil</a></li>
-                <li><a href="#">Insumos</a></li>
+                <li><a href="../perfiles/perfilProfesional.php">Perfil</a></li>
+                <li><a href="../insumos/vistaInsumos.php">Insumos</a></li>
                 <li><a href="../presupuesto/presupuesto.php">Presupuesto</a></li>
                 <li><a href="vistaProfesionales.php">Profesionales</a></li>
-                <li><a href="#">Prestaciones</a></li>
-                <li><a href="#">Reservas</a></li>
-                <li><a href="#">Usuarios</a></li>
+                <li><a href="../perfiles/vistaintranet/reserva.php">Reservas</a></li>
                 <li><a href="../login/cerrar.php">Cerrar Sesion</a></li>
                 
             

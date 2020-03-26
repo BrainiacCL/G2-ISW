@@ -62,9 +62,8 @@ if(isset($_POST['limpiar'])) {
             <li><a href="../perfiles/perfilAdmin.php">Perfil</a></li>
             <li><a href="../Insumos/vistaInsumos.php">Insumos</a></li>
             <li><a href="../perfiles/vistaProfesionales.php">Profesionales</a></li>
-            <li><a href="#">Prestaciones</a></li>
-            <li><a href="#">Reservas</a></li>
-            <li><a href="#">Usuarios</a></li>
+            
+            <li><a href="../perfiles/vistaintranet/reserva.php">Reservas</a></li>
             <li><a href="../login/cerrar.php">Cerrar Sesíon</a></li>
         
 

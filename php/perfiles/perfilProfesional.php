@@ -36,11 +36,10 @@
         <ul class="barra">
             
             <li><a href="../perfiles/perfilProfesional.php">Perfil</a></li>
-            <li><a href="../insumos/vistaInsumos">Insumos</a></li>
-            <li><a href="#">Profesionales</a></li>
+            <li><a href="../insumos/vistaInsumos.php">Insumos</a></li>
             <li><a href="../presupuesto/presupuesto.php">Presupuesto</a></li>
             <li><a href="./vistaintranet/reserva.php">Reservas</a></li>
-            <li><a href="#">Usuarios</a></li>
+         
             <li><a href="../login/cerrar.php">Cerrar Sesíon</a></li>
         
 
