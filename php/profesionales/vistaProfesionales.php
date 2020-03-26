@@ -1,4 +1,11 @@
-<?php include('../conexion.php');?>
+<?php include('../conexion.php');
+    session_start();
+
+    if(!isset($_SESSION['rut-pro'])){
+        header("Location: login.php");
+    }
+
+?>
 
 <!doctype html>
 <html lang="en">
@@ -36,6 +43,8 @@
                 <li><a href="#">Prestaciones</a></li>
                 <li><a href="#">Reservas</a></li>
                 <li><a href="#">Usuarios</a></li>
+                <li><a href="../login/cerrar.php">Cerrar Sesion</a></li>
+                
             
 
             </ul>

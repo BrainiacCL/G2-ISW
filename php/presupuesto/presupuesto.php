@@ -1,5 +1,7 @@
 <?php
-	require 'conexion.php';
+    require 'conexion.php';
+    session_start();
+
 
 if(isset($_POST['enviar'])){
     $diente = $_POST['diente'];
@@ -63,6 +65,7 @@ if(isset($_POST['limpiar'])) {
             <li><a href="#">Prestaciones</a></li>
             <li><a href="#">Reservas</a></li>
             <li><a href="#">Usuarios</a></li>
+            <li><a href="../login/cerrar.php">Cerrar Sesíon</a></li>
         
 
         </ul>

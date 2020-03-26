@@ -1,3 +1,11 @@
+<?php include('../conexion.php');
+    session_start();
+
+    if(!isset($_SESSION['rut-pro'])){
+        header("Location: login.php");
+    }
+
+?>
 <!doctype html>
 <html lang="en">
 
@@ -33,6 +41,7 @@
             <li><a href="../presupuesto/presupuesto.php">Presupuesto</a></li>
             <li><a href="./vistaintranet/reserva.php">Reservas</a></li>
             <li><a href="#">Usuarios</a></li>
+            <li><a href="../login/cerrar.php">Cerrar Sesíon</a></li>
         
 
         </ul>
@@ -42,7 +51,7 @@
             <div class="header">
                 <img src="../../images/foto-perfil.png" alt="foto Perfil">
                 <?php
-                session_start();
+                // session_start();
                 function console_log($output, $with_script_tags = true) {
                   $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . 
                    ' );';

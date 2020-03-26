@@ -87,6 +87,8 @@
             <li><a href="#">Prestaciones</a></li>
             <li><a href="#">Reservas</a></li>
             <li><a href="#">Usuarios</a></li>
+            <li><a href="../login/cerrar.php">Cerrar Sesión</a></li>
+            
         
 
         </ul>

@@ -67,6 +67,7 @@
             <li><a href="../presupuesto/presupuesto.php">Presupuesto</a></li>
             <li><a href="#">Reservas</a></li>
             <li><a href="#">Usuarios</a></li>
+            <li><a href="../login/cerrar.php">Cerrar Sesíon</a></li>
         
 
         </ul>

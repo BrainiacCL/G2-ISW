@@ -33,6 +33,7 @@
             <li><a href="../presupuesto/presupuesto.php">Presupuesto</a></li>
             <li><a href="reserva.php">Reservas</a></li>
             <li><a href="#">Usuarios</a></li>
+            <li><a href="../../login/cerrar.php">Cerrar Sesion</a></li>
         
 
         </ul>
