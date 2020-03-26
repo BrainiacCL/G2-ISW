@@ -17,7 +17,7 @@
             if($result > 0){
                 session_start();
                 $_SESSION['cod-admi'] = "Admi" ;
-                header('Location: ../perfiles/perfilAdmin.php');
+                header('Location: admi.php');
             }
             else{
                 $errores .= "<li>Codigo de Administrado y/o Contraseña incorrectos.</li>";
