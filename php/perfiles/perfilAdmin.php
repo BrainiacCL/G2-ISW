@@ -29,7 +29,8 @@
             
             <li><a href="#Perfil">Perfil</a></li>
             <li><a href="#">Insumos</a></li>
-            <li><a href="#">Profesionales</a></li>
+            <li><a href="../presupuesto/presupuesto.php">Presupuesto</a></li>
+            <li><a href="../profesionales/vistaProfesionales.php">Profesionales</a></li>
             <li><a href="#">Prestaciones</a></li>
             <li><a href="#">Reservas</a></li>
             <li><a href="#">Usuarios</a></li>
@@ -61,44 +62,39 @@
                     </div>
                     
                 </div>
-                <div class=" contenido horario col-6">
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                            <th scope="col">Handle</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                <div class=" contenido horario col-7 m-0">
+                <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Rut</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Dia</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
                 </div>
             </div>
         </div>
